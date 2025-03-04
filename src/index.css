@@ -1,0 +1,17 @@
+
+@import 'remixicon/fonts/remixicon.css';
+@import "tailwindcss";
+
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #181819;
+  border-radius: 1px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6556CD
+}
