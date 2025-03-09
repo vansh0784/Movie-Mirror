@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const HorizontalCards = ({ data }) => {
+const HorizontalCards = ({ data,func }) => {
+    console.log(func);
   return (
     <div className="w-[100%] h-[35%] flex flex-col items-start justify-start gap-4 p-3">
       <div className="w-full flex items-center justify-between">
@@ -14,12 +15,13 @@ const HorizontalCards = ({ data }) => {
             name="option"
             id="options"
             className="rounded border bg-gray-700 border-gray-300"
+            onChange={func}
           >
-            <option defaultValue="All" value="All">
+            <option defaultValue="All" value="all">
               All
             </option>
-            <option value="Movies">Movies</option>
-            <option value="Tv">TV</option>
+            <option value="movie">Movies</option>
+            <option value="tv">TV</option>
           </select>
         </div>
       </div>
