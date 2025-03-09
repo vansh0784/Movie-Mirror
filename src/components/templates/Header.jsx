@@ -1,9 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 const Header = ({ data }) => {
-  console.log(data);
 
-  const backgroundImage = `url(https://image.tmdb.org/t/p/original/${data.backdrop_path})`;
+  const backgroundImage = `url(https://image.tmdb.org/t/p/original/${data.backdrop_path||data?.profile_path})`;
   const backgroundStyle = {
     backgroundImage: `linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.5), rgba(0,0,0,0.8)), ${backgroundImage}`,
     backgroundPosition: "top 1%",
