@@ -19,7 +19,7 @@ const Topnav = () => {
     getSearches();
   }, [query]);
   return (
-    <div className=" relative h-[9vh] flex gap-5 justify-start items-center ml-[15%] cursor-pointer">
+    <div className="w-[100%] relative h-[9vh] flex gap-5 justify-start items-center ml-[15%] cursor-pointer">
       <i className="ri-search-2-line text-2xl font-semibold text-zinc-200"></i>
       <input
         value={query}

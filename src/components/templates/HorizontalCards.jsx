@@ -1,29 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Dropdown from "./Dropdown";
 
 const HorizontalCards = ({ data,func }) => {
-    console.log(func);
   return (
     <div className="w-[100%] h-[35%] flex flex-col items-start justify-start gap-4 p-3">
       <div className="w-full flex items-center justify-between">
         <h1 className="text-3xl font-semibold text-zinc-400">Trending</h1>
         <div className="flex items-center text-zinc-100 p-2">
-          <label htmlFor="options" className="sr-only">
-            Options
-          </label>
-          <select
-            name="option"
-            id="options"
-            className="rounded border bg-gray-700 border-gray-300"
-            onChange={func}
-          >
-            <option defaultValue="All" value="all">
-              All
-            </option>
-            <option value="movie">Movies</option>
-            <option value="tv">TV</option>
-          </select>
-        </div>
+          <Dropdown title={"trending"} options={["all","movie","tv"]} func={func}/>
+          </div>
       </div>
       <div className="flex w-full min-h-[35vh] gap-3 overflow-y-hidden text-zinc-200 mt-2 mb-4">
         {data.map((val, i) => (
