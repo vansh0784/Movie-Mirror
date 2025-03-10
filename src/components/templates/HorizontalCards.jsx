@@ -25,11 +25,11 @@ const HorizontalCards = ({ data,func }) => {
           </select>
         </div>
       </div>
-      <div className="flex w-full min-h-[35vh] gap-3 overflow-y-hidden text-zinc-200 mt-2">
+      <div className="flex w-full min-h-[35vh] gap-3 overflow-y-hidden text-zinc-200 mt-2 mb-4">
         {data.map((val, i) => (
           <div
             key={i}
-            className="w-[15%] min-h-[33vh] p-2 bg-gray-700 rounded-md flex-shrink-0 flex flex-col items-start justify-between mb-2"
+            className="w-[15%] min-h-[33vh] p-2 bg-gray-900 rounded-md flex-shrink-0 flex flex-col items-start justify-between mb-2 "
           >
             <img
               src={`https://image.tmdb.org/t/p/original/${val.backdrop_path || val?.profile_path}`}

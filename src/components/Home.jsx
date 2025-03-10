@@ -4,6 +4,7 @@ import Topnav from "./templates/Topnav";
 import axios from "../utils/axios";
 import Header from "./templates/Header";
 import HorizontalCards from "./templates/HorizontalCards";
+import Loader from "./Loader";
 const Home = () => {
   document.title = "Homepage";
   const [wallPaper, setWallPaper] = useState();
@@ -44,7 +45,7 @@ const Home = () => {
       </div>
     </>
   ) : (
-    <h1 className="text-white">Loading....</h1>
+    <Loader/>
   );
 };
 
