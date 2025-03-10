@@ -1,17 +1,68 @@
-<<<<<<< HEAD
-# Movie-Mirror
-React Based Project 
-=======
-# React + Vite
+Movie Mirror
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🎬 Overview
 
-Currently, two official plugins are available:
+    Movie Mirror is a web application built with React that helps users explore the latest movies and TV shows. It provides detailed insights, trailers, and much more, making it the perfect companion for entertainment enthusiasts.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🚀 Features
 
-## Expanding the ESLint configuration
+   --> 🔍 Search for movies and TV shows
+   --> 🎞️ Watch official trailers
+   --> 📖 View movie details, ratings, and cast
+   --> 📰 Get recommendations for trending content
+   --> 📌 Save your favorite movies and shows
+   --> 🎭 Categorized browsing for easy discovery
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
->>>>>>> 45fb4ff (Initial Commit)
+🛠️ Tech Stack
+
+   --> Frontend: React.js, Tailwind CSS
+   --> State Management: Context API / Redux
+   --> API: TMDB (The Movie Database) API
+   --> Build Tool: Vite / Webpack
+
+📸 Screenshots
+
+    Coming soon!
+
+📦 Installation
+
+    # Clone the repository
+    git clone https://github.com/yourusername/movie-mirror.git
+
+    # Navigate to the project folder
+    cd movie-mirror
+
+    # Install dependencies
+    npm install
+
+    # Start the development server
+    npm run dev
+
+🔧 Usage
+
+    Open http://localhost:5173/ in your browser.
+
+    Search for movies or TV shows.
+
+    Click on a movie to view details and watch the trailer.
+
+📜 API Integration
+
+   -  This project fetches movie data from TMDB API. To use the API, you need to get an API key and add it to   your .env file:
+
+REACT_APP_TMDB_API_KEY=your_api_key_here
+
+🏗️ Upcoming Features
+
+   --> 🎭 Genre-based movie recommendations
+   --> 📆 Release date reminders
+   --> 🌐 Multi-language support
+   --> 👤 User authentication for personalized watchlists
+
+🤝 Contributing
+
+   -  Contributions are welcome! If you’d like to add a feature or fix a bug, feel free to open a pull request.
+
+📞 Contact
+
+    - For any queries or suggestions, feel free to reach out at vanshsin784@gmail.com or connect via GitHub.
