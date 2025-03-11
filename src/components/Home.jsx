@@ -34,11 +34,10 @@ const Home = () => {
   useEffect(() => {
     getTrendingData();
   }, [category]);
-  console.log(category);
   return wallPaper && trending ? (
     <>
       <Sidenav />
-      <div className="w-[80%] h-full overflow-auto">
+      <div className="w-[80%] h-full overflow-hidden overflow-y-auto">
         <Topnav />
         <Header data={wallPaper} />
         <HorizontalCards data={trending} func={(e)=>setCategory(e.target.value)} />

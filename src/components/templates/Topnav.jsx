@@ -19,7 +19,7 @@ const Topnav = () => {
     getSearches();
   }, [query]);
   return (
-    <div className="w-[100%] relative h-[9vh] flex gap-5 justify-start items-center ml-[15%] cursor-pointer">
+    <div className="w-screen relative h-[9vh] flex gap-5 justify-start items-center ml-[15%] cursor-pointer">
       <i className="ri-search-2-line text-2xl font-semibold text-zinc-200"></i>
       <input
         value={query}
@@ -34,7 +34,7 @@ const Topnav = () => {
           className="ri-close-line text-2xl font-semibold text-zinc-200"
         ></i>
       )}
-      <div className="absolute max-h-[50vh] w-[60%] ml-[4%] bg-gray-300 top-[100%] overflow-auto">
+      <div className="absolute max-h-[50vh] w-[60%] ml-[4%] bg-gray-300 top-[100%] overflow-auto z-10">
         {response.map((val, idx) => (
           <Link
             key={idx}

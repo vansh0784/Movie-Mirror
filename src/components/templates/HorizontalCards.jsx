@@ -15,7 +15,7 @@ const HorizontalCards = ({ data,func }) => {
         {data.map((val, i) => (
           <div
             key={i}
-            className="w-[15%] min-h-[33vh] p-2 bg-gray-900 rounded-md flex-shrink-0 flex flex-col items-start justify-between mb-2 "
+            className="w-[15%] min-h-[33vh] p-2 bg-zinc-950 rounded-md flex-shrink-0 flex flex-col items-start justify-between mb-2 "
           >
             <img
               src={`https://image.tmdb.org/t/p/original/${val.backdrop_path || val?.profile_path}`}
