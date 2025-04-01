@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { loadMovieDetail, removeDetail } from "../store/actions/movieActions";
-import { useLocation, useNavigate, useParams } from "react-router-dom";
+import { Outlet, useLocation, useNavigate, useParams } from "react-router-dom";
 import Loader from "../components/Loader";
 import imdb from "../assets/imdb.png";
 import { Link } from "react-router-dom";
@@ -24,7 +24,7 @@ const MovieDetails = () => {
   };
 
   return info ? (
-    <div style={backgroundStyle} className="w-screen h-[150vh] px-[10%]">
+    <div style={backgroundStyle} className=" relative w-screen h-[140vh] px-[10%]">
       <nav className="flex items-center gap-4 w-full h-[10vh]">
         <i
           onClick={() => navigate(-1)}
@@ -75,9 +75,9 @@ const MovieDetails = () => {
           <div className=" flex text-white flex-col">
             <h1 className="text-xl italic font-semibold">{info?.details?.tagline}</h1>
             <h1 className="text-[15px] mt-3 text-gray-300">Overview</h1>
-            <p className="text-[13px] font-medium text-gray-200 max-w-[70%]">{info?.details?.overview}</p>
+            <p className="text-[13px] font-medium text-gray-200 max-w-[90%]">{info?.details?.overview}</p>
             <h1 className="mt-3 text-[15px] text-gray-300">Translated</h1>
-            <p className="text-[13px] font-medium text-gray-200 max-w-[70%] mb-4">{info?.translations?.map(t=>t).join(", ")}</p>
+            <p className="text-[13px] font-medium text-gray-200 max-w-[90%] mb-4">{info?.translations?.map(t=>t).join(", ")}</p>
             <Link to={`${pathname}/trailer`} className="text-white bg-[#6556CD] p-2 rounded w-2/12">
             <i class="ri-play-fill mr-2 text-xl"></i> {"Play Trailer"}
             </Link>
@@ -85,10 +85,11 @@ const MovieDetails = () => {
         </div>
       </div>
       <div>
-        <h1 className="text-2xl text-gray-100 font-semibold mt-3 px-2 py-1">Recommendations & Similar</h1>
+        <hr className="mt-3 mb-3 border-none h-[1px] bg-zinc-500 "/>
+        <h1 className="text-2xl text-gray-100 font-semibold mt-1 px-2 py-1">Recommendations & Similar</h1>
         <HorizontalCards data={info.recommendations.length>0?info.recommendations:info.similar} func={null} />
+          <Outlet/>
       </div>
-
     </div>
   ) : (
     <Loader />
