@@ -49,7 +49,7 @@ const Movie = () => {
                 hasMore={true}
             >
                 <div className="w-full flex flex-wrap justify-center gap-4">
-                    <Cards data={movie} />
+                    <Cards data={movie} title={"movie"} />
                 </div>
             </InfiniteScroll>
         </div>

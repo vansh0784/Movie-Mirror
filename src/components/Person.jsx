@@ -45,7 +45,7 @@ const Person = () => {
                 hasMore={true}
             >
                 <div className="w-full flex flex-wrap justify-center gap-4">
-                    <Cards data={people} />
+                    <Cards data={people} title={"person"} />
                 </div>
             </InfiniteScroll>
         </div>

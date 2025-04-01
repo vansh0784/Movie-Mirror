@@ -36,7 +36,7 @@ const Topnav = () => {
       )}
       <div className="absolute max-h-[50vh] w-[60%] ml-[4%] bg-gray-300 top-[100%] overflow-auto z-10">
         {response.map((val, idx) => (
-          <Link
+          <Link to={`/${val?.media_type}/detail/${val?.id}`}
             key={idx}
             className="p-4 text-zinc-900 hover:bg-zinc-300 hover:text-black duration-300 flex justify-between items-center border-b-2  "
           >

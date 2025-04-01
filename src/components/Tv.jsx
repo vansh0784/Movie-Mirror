@@ -50,7 +50,7 @@ const Tv = () => {
                 hasMore={true}
             >
                 <div className="w-full flex flex-wrap justify-center gap-4">
-                    <Cards data={tv} />
+                    <Cards data={tv} title={"tv"} />
                 </div>
             </InfiniteScroll>
         </div>
