@@ -20,8 +20,10 @@ const HorizontalCards = ({ data}) => {
               {val?.title || val?.name || val?.original_title}
             </h1>
             <p className='text-sm'>
-              {val?.overview.slice(0, 75)} <Link className='text-blue-500'>more...</Link>
+              {(val?.overview||"Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium dolores debitis tempora soluta. Dignissimos adipisci nulla deleniti sint fugiat magni, sed debitis repellat consequuntur quisquam! Officiis cupiditate at facilis suscipit.").slice(0,75)}
+               <Link className='text-blue-500'>more...</Link>
             </p>
+
           </Link>
         ))}
       </div>

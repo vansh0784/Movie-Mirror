@@ -35,6 +35,7 @@ const Home = () => {
   useEffect(() => {
     getTrendingData();
   }, [category]);
+  console.log(trending)
   return wallPaper && trending ? (
     <>
       <Sidenav />
