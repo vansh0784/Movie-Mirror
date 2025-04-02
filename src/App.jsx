@@ -13,6 +13,7 @@ import MovieDetails from "./components/MovieDetails.jsx";
 import TvDetails from "./components/TvDetails.jsx";
 import PersonDetails from "./components/PersonDetails.jsx";
 import Trailer from "./components/Trailer.jsx";
+import NotFound from "./components/NotFound.jsx";
 const App = () => {
   return (
     <Provider store={store}>
@@ -29,10 +30,16 @@ const App = () => {
 
           <Route path="/popular" element={<Popular />}></Route>
           <Route path="/movie" element={<Movie />}></Route>
-          <Route path="/tvshows" element={<Tv />}></Route>
-          <Route path="/tvshows/detail/:id" element={<TvDetails />}></Route>
+          <Route path="/tv" element={<Tv />}></Route>
+          <Route path="/tv/detail/:id" element={<TvDetails />}>
+          <Route
+              path="/tv/detail/:id/trailer"
+              element={<Trailer />}
+            ></Route>
+          </Route>
           <Route path="/people" element={<Person />}></Route>
           <Route path="/people/detail/:id" element={<PersonDetails />}></Route>
+          <Route path="*" element={<NotFound/>}></Route>
         </Routes>
       </div>
     </Provider>

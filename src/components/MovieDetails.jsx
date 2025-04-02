@@ -14,7 +14,6 @@ const MovieDetails = () => {
   const navigate = useNavigate();
   useEffect(() => {
     dispatch(loadMovieDetail(id));
-    return () => dispatch(removeDetail());
   }, [id]);
   const backgroundImage = `url(https://image.tmdb.org/t/p/original/${info?.details?.backdrop_path})`;
   const backgroundStyle = {
