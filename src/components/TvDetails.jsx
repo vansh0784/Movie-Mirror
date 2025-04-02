@@ -85,9 +85,9 @@ const TvDetails = () => {
     <hr className="mt-3 mb-3 border-none h-[1px] bg-zinc-500 "/>
     <h1 className="text-2xl text-gray-100 font-semibold mt-1 px-2 py-1">Seasons</h1>
     <div className="flex w-[100%] gap-3 overflow-y-hidden">{
-      info?.details?.seasons.map((s,i)=>(<div key={i} className="flex flex-col gap-1 bg-zinc-950 px-2 py-1 text-zinc-200 rounded h-[43vh]  ">
+      info?.details?.seasons.map((s,i)=>(<div key={i} className=" flex flex-col gap-1 bg-zinc-950 px-2 py-1 text-zinc-200 rounded h-[41vh] mb-1 ">
         <img src={`https://image.tmdb.org/t/p/original/${s.backdrop_path || s?.profile_path || s?.poster_path}`} alt="posters" className="h-[30vh] min-w-40 rounded" />
-        <h1 className="px-1">{s?.name}</h1>
+        <h1 className="px-1 text-sm font-semibold">{s?.name}</h1>
       </div>))
       }
 

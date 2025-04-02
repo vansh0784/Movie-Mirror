@@ -9,7 +9,7 @@ const HorizontalCards = ({ data }) => {
           <Link
             to={`/${val?.media_type}/detail/${val?.id}`}
             key={i}
-            className="w-[13vw] min-h-[30vh] p-2 bg-zinc-950 rounded-md flex-shrink-0 flex flex-col gap-y-1 items-start"
+            className="w-[13vw] h-[35vh] p-2 bg-zinc-950 rounded-md flex-shrink-0 flex flex-col gap-y-1 items-start"
           >
             <img
               src={`https://image.tmdb.org/t/p/original/${val.backdrop_path || val?.profile_path || val?.poster_path}`}
