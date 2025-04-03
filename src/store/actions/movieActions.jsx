@@ -20,7 +20,6 @@ export const loadMovieDetail=(id)=>async(dispatch,getState)=>{
             watchProviders:watchProviders?.data?.results?.IN,
             translations:translations?.data?.translations?.map(t=>t.english_name),
         }
-        console.log(largeData);
         dispatch(loadDetail(largeData));
     } catch(err){
 

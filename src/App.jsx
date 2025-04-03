@@ -14,6 +14,8 @@ import TvDetails from "./components/TvDetails.jsx";
 import PersonDetails from "./components/PersonDetails.jsx";
 import Trailer from "./components/Trailer.jsx";
 import NotFound from "./components/NotFound.jsx";
+import About from "./components/About.jsx";
+import Contact from "./components/Contact.jsx";
 const App = () => {
   return (
     <Provider store={store}>
@@ -37,8 +39,10 @@ const App = () => {
               element={<Trailer />}
             ></Route>
           </Route>
-          <Route path="/people" element={<Person />}></Route>
-          <Route path="/people/detail/:id" element={<PersonDetails />}></Route>
+          <Route path="/person" element={<Person />}></Route>
+          <Route path="/person/detail/:id" element={<PersonDetails />}></Route>
+          <Route path="/about" element={<About/>}></Route>
+          <Route path="/contactUs" element={<Contact/>}></Route>
           <Route path="*" element={<NotFound/>}></Route>
         </Routes>
       </div>

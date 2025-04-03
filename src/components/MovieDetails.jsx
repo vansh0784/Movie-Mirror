@@ -61,7 +61,7 @@ const MovieDetails = () => {
               info?.details?.name ||
               info?.details?.original_title}
             <span className="text-2xl text-gray-200 font-semibold ml-3 text-center">
-              ({info?.details?.release_date.split("-")[0]})
+              ({info?.details?.release_date.split("-")[0]||null})
             </span>
           </h1>
             <div className="absolute rounded-full text-xl font-semibold p-1 bg-zinc-300 text-gray-800 w-15 h-15 flex items-center justify-center bottom-[7%] left-[20%]">

@@ -21,6 +21,7 @@ const TvDetails = () => {
     backgroundPosition: "top 1%",
     backgroundSize: "cover",
   };
+  console.log(info);
   return info ? (<div style={backgroundStyle} className=" relative w-screen h-[180vh] px-[10%]">
     <nav className="flex items-center gap-4 w-full h-[10vh]">
       <i
